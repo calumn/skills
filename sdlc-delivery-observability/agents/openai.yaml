@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC: Observability"
+  short_description: "Add logging, traces, metrics, and health signals"
+  default_prompt: "Apply observability guidance to this implementation."

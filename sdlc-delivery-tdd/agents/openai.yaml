@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: TDD"
+  short_description: "Use red-green TDD at agreed seams"
+  default_prompt: "Use test-driven development for this implementation."
+policy:
+  allow_implicit_invocation: false

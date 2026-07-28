@@ -31,13 +31,21 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-architecture-grill-with-docs`: run a grilling session while also maintaining domain language docs and ADRs.
 - `sdlc-architecture-adr`: record concise architecture decisions when real trade-offs need to be preserved.
 - `sdlc-architecture-system-context`: create high-level system context documents and diagrams.
+- `sdlc-architecture-codebase-design`: design deep modules, clean interfaces, seams, adapters, and testable codebase structure.
+
+### SDLC Delivery
+
+- `sdlc-delivery-python-service-style`: guide Python FastAPI service implementation, structure, typing, route handlers, settings, async choices, and tests.
+- `sdlc-delivery-typescript-web-style`: guide strict TypeScript React/Vite implementation, API clients, UI state, components, hooks, and tests.
+- `sdlc-delivery-observability`: guide logging, structured events, request IDs, traces, metrics, health checks, readiness, and cross-service diagnostics.
+- `sdlc-delivery-dependency-injection`: guide dependency injection for service seams, adapters, test doubles, settings, queues, storage, clients, and model runtimes.
+- `sdlc-delivery-tdd`: guide red-green test-driven development at documented or agreed seams, with behaviour-focused tests and careful mocking.
 
 ## Suggested Future Skills
 
 - `sdlc-requirements-elicit`: guide stakeholder interviews and requirements discovery.
 - `sdlc-requirements-write`: turn notes into clear, atomic, testable requirements.
 - `sdlc-requirements-trace`: maintain links from goals to requirements, scenarios, tests, and production evidence.
-- `sdlc-delivery-test-plan`: turn scenarios and acceptance criteria into a test strategy.
 - `beehive-varroa-model-governance`: review Varroa model datasets, annotations, metrics, consent, and release gates.
 
 ## Notes

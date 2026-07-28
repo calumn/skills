@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC: Dependency Injection"
+  short_description: "Use dependency injection for seams and adapters"
+  default_prompt: "Apply dependency injection guidance to this implementation."

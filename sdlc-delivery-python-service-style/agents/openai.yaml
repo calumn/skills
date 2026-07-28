@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC: Python Service Style"
+  short_description: "Implement Python FastAPI services cleanly"
+  default_prompt: "Apply Python service style guidance to this implementation."

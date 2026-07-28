@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: Codebase Design"
+  short_description: "Design deep modules and clean seams"
+  default_prompt: "Review this codebase design using deep modules, seams, interfaces, and adapters."
+policy:
+  allow_implicit_invocation: false

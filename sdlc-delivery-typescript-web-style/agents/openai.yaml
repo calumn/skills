@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC: TypeScript Web Style"
+  short_description: "Implement strict TypeScript web code cleanly"
+  default_prompt: "Apply TypeScript web style guidance to this implementation."

@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: Requirements Review"
+  short_description: "Check requirements for gaps, ambiguity, and readiness"
+  default_prompt: "Review these requirements and tell me what blocks the next phase."
+policy:
+  allow_implicit_invocation: false

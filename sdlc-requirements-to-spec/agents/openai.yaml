@@ -1,0 +1,5 @@
+interface:
+  display_name: "SDLC: Requirements To Spec"
+  short_description: "Turn a conversation into a Gherkin-based spec"
+policy:
+  allow_implicit_invocation: false

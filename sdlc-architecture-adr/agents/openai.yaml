@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: Architecture ADR"
+  short_description: "Record decisions and follow-on choices"
+  default_prompt: "Write an ADR for this architecture decision."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: Architecture System Context"
+  short_description: "Create system context diagrams with trust boundaries"
+  default_prompt: "Create a system context document and diagram."
+policy:
+  allow_implicit_invocation: false

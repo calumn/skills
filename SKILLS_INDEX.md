@@ -29,13 +29,14 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-architecture-domain-model`: derive domain entities, relationships, lifecycle states, invariants, open architecture questions, and a matching visual diagram from requirements.
 - `sdlc-architecture-domain-language`: sharpen project terminology, maintain a `CONTEXT.md` glossary, and create lightweight ADRs only when warranted.
 - `sdlc-architecture-grill-with-docs`: run a grilling session while also maintaining domain language docs and ADRs.
+- `sdlc-architecture-adr`: record concise architecture decisions when real trade-offs need to be preserved.
+- `sdlc-architecture-system-context`: create high-level system context documents and diagrams.
 
 ## Suggested Future Skills
 
 - `sdlc-requirements-elicit`: guide stakeholder interviews and requirements discovery.
 - `sdlc-requirements-write`: turn notes into clear, atomic, testable requirements.
 - `sdlc-requirements-trace`: maintain links from goals to requirements, scenarios, tests, and production evidence.
-- `sdlc-architecture-adr`: write more formal architecture decision records when a dedicated ADR workflow is needed.
 - `sdlc-delivery-test-plan`: turn scenarios and acceptance criteria into a test strategy.
 - `beehive-varroa-model-governance`: review Varroa model datasets, annotations, metrics, consent, and release gates.
 

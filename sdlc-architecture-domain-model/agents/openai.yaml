@@ -1,0 +1,6 @@
+interface:
+  display_name: "SDLC: Architecture Domain Model"
+  short_description: "Derive a written and visual domain model"
+  default_prompt: "Create a written domain model and matching diagram from these requirements."
+policy:
+  allow_implicit_invocation: false

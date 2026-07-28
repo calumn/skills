@@ -1,0 +1,3 @@
+interface:
+  display_name: "SDLC: Architecture Domain Language"
+  short_description: "Sharpen glossary terms and lightweight ADRs"

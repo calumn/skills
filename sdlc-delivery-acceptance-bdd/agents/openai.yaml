@@ -1,0 +1,7 @@
+interface:
+  display_name: "Acceptance BDD"
+  short_description: "Write Gherkin and pytest-bdd acceptance tests"
+  default_prompt: "Use $sdlc-delivery-acceptance-bdd to add acceptance scenarios and step definitions for this vertical slice."
+
+policy:
+  allow_implicit_invocation: true

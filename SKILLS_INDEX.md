@@ -10,7 +10,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-requirements-*`: requirements gathering, review, specification, Gherkin, and traceability skills.
 - `sdlc-architecture-*`: future architecture, domain modelling, ADR, and technical design skills.
 - `sdlc-delivery-*`: future implementation planning, testing, release, and production readiness skills.
-- `beehive-*`: future BeehiveMonitor-specific skills that should not be treated as general reusable SDLC guidance.
+- `hivesight-*`: future HiveSight-specific skills that should not be treated as general reusable SDLC guidance.
 
 ## Current Skills
 
@@ -40,13 +40,14 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-delivery-observability`: guide logging, structured events, request IDs, traces, metrics, health checks, readiness, and cross-service diagnostics.
 - `sdlc-delivery-dependency-injection`: guide dependency injection for service seams, adapters, test doubles, settings, queues, storage, clients, and model runtimes.
 - `sdlc-delivery-tdd`: guide red-green test-driven development at documented or agreed seams, with behaviour-focused tests and careful mocking.
+- `sdlc-delivery-vertical-slice-planning`: define implementation-ready tracer-bullet slices that cut through UI, API, service workflow, storage, tests, and operational evidence where relevant.
 
 ## Suggested Future Skills
 
 - `sdlc-requirements-elicit`: guide stakeholder interviews and requirements discovery.
 - `sdlc-requirements-write`: turn notes into clear, atomic, testable requirements.
 - `sdlc-requirements-trace`: maintain links from goals to requirements, scenarios, tests, and production evidence.
-- `beehive-varroa-model-governance`: review Varroa model datasets, annotations, metrics, consent, and release gates.
+- `hivesight-varroa-model-governance`: review Varroa model datasets, annotations, metrics, consent, and release gates.
 
 ## Notes
 

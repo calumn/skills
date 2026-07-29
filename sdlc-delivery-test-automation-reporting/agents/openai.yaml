@@ -1,0 +1,4 @@
+interface:
+  display_name: "SDLC Delivery Test Automation Reporting"
+  short_description: "Playwright harnesses and slice test reports"
+  default_prompt: "Use $sdlc-delivery-test-automation-reporting to add browser acceptance tests and a slice verification report."

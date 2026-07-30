@@ -41,10 +41,6 @@ Use this skill when implementing or reviewing Python service code. Apply it with
 - Use local-substitutable dependencies where practical, such as a test database or object-store stand-in.
 - Do not test private helpers unless they are genuinely complex pure functions.
 
-## BeehiveMonitor Defaults
+## Closeout
 
-- Core API route handlers should delegate to modules such as `InspectionPhotoAccess` and `AnalysisRequestWorkflow`.
-- Analysis Service route/worker handlers should delegate to `AnalysisJobRunner`.
-- Model execution should sit behind `ModelRuntime`.
-- Object storage, queue publishing, model runtime, and persistence should be adapters behind module interfaces.
-
+If implementation changes affect scope, public contracts, domain language, test evidence, or deferred work, update the relevant docs, parking-lot items, or AI-SDLC observations when appropriate.

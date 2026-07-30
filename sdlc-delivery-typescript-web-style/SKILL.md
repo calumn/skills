@@ -39,10 +39,6 @@ Use this skill when implementing or reviewing TypeScript web code. Apply it with
 - Test user workflows at component/page level once workflows become real.
 - Avoid tests that assert private component implementation details.
 
-## BeehiveMonitor Defaults
+## Closeout
 
-- The Web App talks to the Core API only.
-- Storage and Analysis Service calls should not leak into UI components.
-- Photo upload, analysis request, and analysis status should go through a `CoreApiClient` module.
-- Model-governance UI should remain out of the V1 beekeeper workflow unless explicitly brought into scope.
-
+If frontend work changes user-visible scope, API contracts, domain language, acceptance evidence, or deferred work, update the relevant docs, parking-lot items, or AI-SDLC observations when appropriate.

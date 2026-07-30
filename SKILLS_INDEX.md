@@ -32,6 +32,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-architecture-adr`: record concise architecture decisions when real trade-offs need to be preserved.
 - `sdlc-architecture-system-context`: create high-level system context documents and diagrams.
 - `sdlc-architecture-codebase-design`: design deep modules, clean interfaces, seams, adapters, and testable codebase structure.
+- `sdlc-architecture-persistence-design`: design persistence boundaries, schemas, repositories, migrations, audit/history, and retention.
 
 ### SDLC Delivery
 
@@ -41,12 +42,26 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-delivery-dependency-injection`: guide dependency injection for service seams, adapters, test doubles, settings, queues, storage, clients, and model runtimes.
 - `sdlc-delivery-tdd`: guide red-green test-driven development at documented or agreed seams, with behaviour-focused tests and careful mocking.
 - `sdlc-delivery-vertical-slice-planning`: define implementation-ready tracer-bullet slices that cut through UI, API, service workflow, storage, tests, and operational evidence where relevant.
+- `sdlc-delivery-acceptance-bdd`: guide Gherkin, Cucumber-style feature files, pytest-bdd step definitions, and executable acceptance specifications.
+- `sdlc-delivery-test-automation-reporting`: guide browser acceptance harnesses, local test orchestration, and slice verification reports.
+
+### SDLC Governance
+
+- `sdlc-governance-traceability-audit`: audit drift across vision, requirements, architecture, slices, code, tests, reports, parking-lot items, and AI-SDLC observations.
+- `sdlc-skills-library-review`: review the skills library for stale indexes, broken references, trigger accuracy, project-specific leakage, naming drift, and missing metadata.
+
+### HiveSight
+
+- `hivesight-project-delivery-context`: HiveSight-specific delivery defaults, service boundaries, seams, verification commands, dev auth, and closeout reminders.
 
 ## Suggested Future Skills
 
 - `sdlc-requirements-elicit`: guide stakeholder interviews and requirements discovery.
 - `sdlc-requirements-write`: turn notes into clear, atomic, testable requirements.
 - `sdlc-requirements-trace`: maintain links from goals to requirements, scenarios, tests, and production evidence.
+- `sdlc-security-threat-model`: threat-model auth, uploads, signed URLs, object storage, privacy, consent, external APIs, and trust boundaries.
+- `sdlc-contract-api-governance`: govern REST API, event schema, shared contract, compatibility, versioning, and deprecation changes.
+- `sdlc-operations-release-readiness`: guide deployment, release gates, rollout, rollback, smoke tests, runbooks, and incident response.
 - `hivesight-varroa-model-governance`: review Varroa model datasets, annotations, metrics, consent, and release gates.
 
 ## Notes

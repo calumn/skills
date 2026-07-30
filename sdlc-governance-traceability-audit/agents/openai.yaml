@@ -1,0 +1,3 @@
+display_name: SDLC Traceability Audit
+short_description: Audit SDLC drift across docs, code, and tests.
+default_prompt: Audit this project for SDLC traceability drift.

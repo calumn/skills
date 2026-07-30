@@ -69,3 +69,8 @@ Before writing, verify:
 - The ADR does not hide open questions as settled decisions.
 - Material unresolved choices are captured as Follow-on Decisions when useful.
 - Any related diagram or system-context doc is linked or updated when useful.
+- Important deferred work is added to the project parking lot when it is not suitable for the ADR.
+
+## Closeout
+
+If the decision changes the traceability chain or AI-SDLC learning record, update related requirements, domain model, slice docs, parking-lot items, or AI-SDLC observations when appropriate.

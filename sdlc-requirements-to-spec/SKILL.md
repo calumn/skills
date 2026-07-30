@@ -1,12 +1,9 @@
 ---
 name: sdlc-requirements-to-spec
-description: Turn the current conversation into a requirements/product spec with Gherkin scenarios and publish it to the project issue tracker or local project docs — no interview, just synthesis of what has already been discussed.
-disable-model-invocation: true
+description: Turn the current conversation into a requirements/product spec with Gherkin scenarios and local project documentation. Use when synthesizing what has already been discussed into a PRD/spec without running a new interview; publish to an issue tracker only when the user explicitly asks or the project convention requires it.
 ---
 
 This skill takes the current conversation context and codebase understanding and produces a spec (you may know this document as a PRD). Do NOT interview the user — just synthesize what you already know.
-
-The issue tracker and triage label vocabulary should have been provided to you — run `/setup-matt-pocock-skills` if not.
 
 ## Process
 
@@ -16,7 +13,9 @@ The issue tracker and triage label vocabulary should have been provided to you �
 
 Check with the user that these seams match their expectations.
 
-3. Write the spec using the template below, then publish it to the project issue tracker. Apply the `ready-for-agent` triage label - no need for additional triage.
+3. Write the spec using the template below, then save it as a local markdown artifact in the project's requirements or docs area unless the user explicitly asks for issue tracker tickets.
+
+4. Capture important deferred work in the project parking lot when present. Do not leave important "later" items only in Out of Scope.
 
 <spec-template>
 
@@ -80,3 +79,7 @@ A description of the things that are out of scope for this spec.
 Any further notes about the feature.
 
 </spec-template>
+
+## Closeout
+
+If the spec changes product scope, acceptance coverage, parked work, or the AI-SDLC learning record, update the relevant artifacts or recommend the update before finishing.

@@ -114,12 +114,12 @@ Keep the report honest. It summarizes checks that ran; it must not imply unmeasu
 
 ## Quality Loop
 
-For HiveSight-style service-oriented slices, the report command should usually run:
+For service-oriented slices, the report command should usually run the relevant subset of:
 
-- Core API tests, including API-level BDD scenarios;
-- Analysis Service tests;
-- Web TypeScript check;
-- Web browser acceptance tests.
+- backend unit/API tests, including API-level BDD scenarios when present;
+- worker or secondary-service tests;
+- frontend type checks;
+- browser acceptance tests.
 
 Also run lint tools separately when they are not part of the report command.
 
@@ -136,4 +136,8 @@ When browser access is blocked for Codex but runnable by the user or CI, still a
 - Does the report show API-level BDD results when present?
 - Does the report avoid false coverage claims?
 - Are generated reports and browser artifacts ignored when they should not be committed?
-- Are future Gherkin/UI-BDD expectations documented when plain Playwright is used as a temporary first step?
+- Are future Gherkin/UI-BDD expectations documented, parked, or explicitly closed when plain browser tests are used?
+
+## Closeout
+
+If the verification run changes what the team can claim, update slice docs, reports, parking-lot items, and AI-SDLC observations when appropriate.

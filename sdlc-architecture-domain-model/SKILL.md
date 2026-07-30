@@ -98,3 +98,8 @@ Before finalising, check that:
 - no major lifecycle state is implicit only in prose
 - future out-of-scope concepts are named without overbuilding them
 - open questions are specific enough to drive the next architecture decision
+- important deferred concepts are parked with revisit triggers when they should not disappear
+
+## Closeout
+
+If the model changes requirements traceability, slice scope, terminology, or deferred work, update related docs, glossary, parking-lot items, or AI-SDLC observations when appropriate.

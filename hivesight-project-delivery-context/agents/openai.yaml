@@ -1,0 +1,3 @@
+display_name: HiveSight Context
+short_description: HiveSight delivery defaults and closeout context.
+default_prompt: Use HiveSight project delivery context.

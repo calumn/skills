@@ -23,8 +23,6 @@ A **seam** is the public boundary you test at: the interface where you observe b
 
 Ask: "What's the public interface, and which seams should we test?"
 
-For BeehiveMonitor, the initial documented seams include `CoreApiClient`, `InspectionPhotoAccess`, `AnalysisRequestWorkflow`, `AnalysisJobRunner`, and `ModelRuntime`.
-
 ## Anti-patterns
 
 - **Implementation-coupled** — mocks internal collaborators, tests private methods, or verifies through a side channel (querying the database instead of using the interface). The tell: the test breaks when you refactor but behavior hasn't changed.
@@ -35,4 +33,8 @@ For BeehiveMonitor, the initial documented seams include `CoreApiClient`, `Inspe
 
 - **Red before green.** Write the failing test first, then only enough code to pass it. Don't anticipate future tests or add speculative features.
 - **One slice at a time.** One seam, one test, one minimal implementation per cycle.
-- **Refactoring is not part of the loop.** It belongs to the review stage (see the `code-review` skill), not the red → green implementation cycle.
+- **Refactoring is not part of the loop.** It belongs to a deliberate review/refactoring stage, not the red → green implementation cycle.
+
+## Closeout
+
+If the TDD work changes behaviour, contracts, acceptance criteria, or deferred scope, update the relevant docs, parking-lot items, or AI-SDLC observations when appropriate.

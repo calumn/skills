@@ -1,0 +1,3 @@
+display_name: Skills Library Review
+short_description: Audit skills for drift, references, and metadata.
+default_prompt: Review this skills library for drift.

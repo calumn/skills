@@ -1,0 +1,3 @@
+display_name: Persistence Design
+short_description: Design schemas, repositories, migrations, and audit.
+default_prompt: Design persistence boundaries for this project.

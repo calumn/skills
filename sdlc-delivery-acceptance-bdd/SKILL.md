@@ -41,7 +41,7 @@ Prefer lower-level tests when:
 
 ## Scenario Writing Rules
 
-- Use project domain language exactly. For HiveSight, prefer `User`, `Workspace`, `Workspace Membership`, `Beekeeper`, `Inspection Photo`, `Analysis Run`, and `Analysis Result` as defined in `CONTEXT.md`.
+- Use project domain language exactly. Prefer terms defined in the project's glossary or context document.
 - Keep scenarios concrete. Avoid vague steps like `Given everything is set up`.
 - Keep each scenario centred on one behaviour or business rule.
 - Write `Given` steps as preconditions, not user interactions.
@@ -69,11 +69,7 @@ Pick the highest reliable seam that proves the behaviour:
 - **Browser-level BDD**: use when the visual/user workflow itself is the behaviour, or when UI state/copy/accessibility is the acceptance target.
 - **Service-level BDD**: use when the actor is an internal service or async worker and HTTP/UI would add noise.
 
-For HiveSight:
-
-- Use Core API BDD when proving Workspace authorization, data-use gates, analysis handoff, result projection, and stable error codes.
-- Use Web/UI BDD when proving that the Beekeeper can complete a visible workflow or that claim-boundary wording appears.
-- Keep `InspectionPhotoAccess`, `AnalysisRequestWorkflow`, `AnalysisProcessingWorkflow`, `AnalysisJobRunner`, and `ModelRuntime` covered by focused seam tests underneath.
+When plain browser tests are used instead of UI-level Gherkin, record whether UI Gherkin is deliberately deferred, unnecessary, or parked for a future harness decision.
 
 ## Naming And Placement
 
@@ -98,6 +94,7 @@ Use feature filenames that identify the behaviour or slice. Use test filenames t
 - Can a failing step point to a useful product regression?
 - Are lower-level details covered by faster seam tests instead of bloating the feature?
 - Are Gherkin files and step definitions both included in the normal test command?
+- Are deferred acceptance-test concerns parked or explicitly closed instead of repeated as vague future work?
 
 ## Useful Sources
 

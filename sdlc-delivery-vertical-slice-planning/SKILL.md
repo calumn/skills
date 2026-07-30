@@ -16,6 +16,7 @@ Read the smallest set of current project artifacts needed to understand the feat
 - `CONTEXT.md` for canonical domain language.
 - Relevant requirements, product spec, Gherkin scenarios, acceptance criteria, and decision log entries.
 - Relevant architecture docs and ADRs.
+- `architecture/parking-lot.md` when present, to check whether parked work is relevant to the new slice.
 - Existing code only enough to understand current seams, services, and test surfaces.
 
 Use project vocabulary exactly. If the language conflicts with `CONTEXT.md`, pause and resolve the term before writing the slice.
@@ -45,7 +46,8 @@ Wide refactors are the exception. If one mechanical change fans across the whole
 6. Identify seams for TDD and whether each seam is already documented or new.
 7. Mark dependencies and blockers.
 8. Write the slice artifact.
-9. Ask for approval before implementation if the slice changes scope, policy, or architecture.
+9. Park important deferred work with a revisit trigger instead of leaving it only in Out Of Scope.
+10. Ask for approval before implementation if the slice changes scope, policy, or architecture.
 
 ## Artifact
 
@@ -125,13 +127,9 @@ List only the minimum entities, fields, or contract messages needed for the slic
 - Questions that must be answered before implementation, if any.
 ```
 
-## HiveSight Guidance
+## Closeout
 
-For the first HiveSight slice, prefer proving authenticated inspection photo intake before real model inference:
-
-`User registered/logged in -> Workspace exists -> Workspace Data Use Agreement accepted -> apiary/hive/inspection exists -> inspection photo accepted -> analysis requested or stubbed -> status visible`
-
-Keep real Varroa detection out of the first slice unless the user explicitly brings it forward.
+At slice or remediation closeout, check whether the work changes the project's traceability chain or AI-SDLC learning record. If it does, update or recommend updating the relevant requirements, product spec, domain model, ADRs, slice docs, acceptance tests, verification report, parking-lot items, or AI-SDLC observations.
 
 ## Handoff To Delivery
 

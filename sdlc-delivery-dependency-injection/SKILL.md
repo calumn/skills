@@ -44,10 +44,6 @@ Use dependency injection to make seams explicit, testable, and boring. Apply thi
 - Keep dependency aliases with `Annotated` when reused across routes.
 - Avoid putting business rules inside dependency functions unless the dependency is the intended policy seam, such as `require_workspace_access`.
 
-## BeehiveMonitor Defaults
+## Closeout
 
-- Inject object-storage and queue adapters into `InspectionPhotoAccess` and `AnalysisRequestWorkflow`.
-- Inject object-storage, model runtime, analysis store, and event publisher adapters into `AnalysisJobRunner`.
-- Inject the Core API client into frontend workflow hooks where tests need an in-memory client.
-- Keep model selection and data-use policy explicit dependencies rather than hidden globals.
-
+If dependency changes alter module seams, contracts, tests, domain language, or deferred work, update the relevant architecture docs, ADRs, parking-lot items, or AI-SDLC observations when appropriate.

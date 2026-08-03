@@ -18,6 +18,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 
 - `productivity-grilling`: one-question-at-a-time stress-test interview for plans, decisions, and ideas.
 - `productivity-grill-me`: wrapper skill that starts a grilling session.
+- `productivity-plain-language-git-status`: describe git/version-control actions (commits, branches, merges, PRs) in plain, outcome-focused language instead of jargon.
 
 ### SDLC Requirements
 
@@ -41,7 +42,9 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-delivery-observability`: guide logging, structured events, request IDs, traces, metrics, health checks, readiness, and cross-service diagnostics.
 - `sdlc-delivery-dependency-injection`: guide dependency injection for service seams, adapters, test doubles, settings, queues, storage, clients, and model runtimes.
 - `sdlc-delivery-tdd`: guide red-green test-driven development at documented or agreed seams, with behaviour-focused tests and careful mocking.
+- `sdlc-delivery-defect-regression-guard`: guide defect fixes with an explicit regression-test decision at the cheapest useful level.
 - `sdlc-delivery-vertical-slice-planning`: define implementation-ready tracer-bullet slices that cut through UI, API, service workflow, storage, tests, and operational evidence where relevant.
+- `sdlc-delivery-acceptance-scenario-signoff`: after a slice's design questions are settled but before the slice doc is finalized or implementation begins, draft the actual Gherkin scenario text and get the user's explicit sign-off on it as its own checkpoint — for users who rely on acceptance scenarios, not code, to trust the system.
 - `sdlc-delivery-acceptance-bdd`: guide Gherkin, Cucumber-style feature files, pytest-bdd step definitions, and executable acceptance specifications.
 - `sdlc-delivery-test-automation-reporting`: guide browser acceptance harnesses, local test orchestration, and slice verification reports.
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Defect Regression Guard"
+  short_description: "Choose the right regression guard for bugs."
+  default_prompt: "Use $sdlc-delivery-defect-regression-guard to fix this defect with the cheapest useful regression test."
+
+policy:
+  allow_implicit_invocation: true

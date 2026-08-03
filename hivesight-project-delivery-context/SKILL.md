@@ -16,6 +16,7 @@ Use this skill only for HiveSight-specific delivery context. Pair it with generi
 - Dev auth: Core API requests use `x-hivesight-dev-user-id`.
 - Current persistence: dual-mode. Fast workflow/unit tests still use the in-memory dev store; durable Bee Annotation Repository metadata can run through the opt-in Postgres-backed Core API path from Slice 0014.
 - Slice verification command: `pnpm verify:slice`.
+- Task-oriented user guide: `/Users/calumnobles/Projects/hive-sight/docs/user-guide.md`.
 - Local Postgres is provided through Docker Compose and is now required to fully acceptance-close persistence-dependent slices.
 
 ## Known Seams
@@ -33,6 +34,7 @@ Use this skill only for HiveSight-specific delivery context. Pair it with generi
 - Prefer API-level BDD for service acceptance.
 - Prefer Playwright specs for current UI/browser acceptance until a UI-level Gherkin harness is deliberately introduced.
 - Use `pnpm verify:slice` before closing slices or remediation work.
+- When fixing defects in HiveSight, apply `sdlc-delivery-defect-regression-guard`: add the cheapest useful regression guard unless explicitly deciding and reporting why no test was added.
 - Treat `pnpm verify:slice` as necessary but not always sufficient. If a slice changes durable persistence, migrations, database constraints, seed/reset behaviour, or restart-survival claims, also verify the live Postgres path or explicitly record why it could not be run.
 - Keep generated reports honest: they summarize executed checks, not unmeasured coverage or production readiness.
 - Do not mark a Postgres-dependent slice fully acceptance-closed while Docker/Postgres is unavailable. Use wording such as `implemented; fast suite passed; live Postgres verification pending`.
@@ -56,6 +58,7 @@ At closeout, check whether the work changes or creates:
 - requirements or product specification;
 - domain model, glossary, ADRs, or architecture notes;
 - vertical slice or remediation docs;
+- task-oriented user guide entries in `docs/user-guide.md`;
 - acceptance tests or verification reports;
 - `architecture/parking-lot.md`;
 - `requirements/ai-sdlc-observations.md`.

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Acceptance Scenario Signoff"
+  short_description: "Get explicit user sign-off on draft Gherkin scenarios before implementation"
+  default_prompt: "Use $sdlc-delivery-acceptance-scenario-signoff to draft this slice's acceptance scenarios and get sign-off before implementation begins."
+
+policy:
+  allow_implicit_invocation: true

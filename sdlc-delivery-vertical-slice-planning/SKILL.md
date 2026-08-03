@@ -45,9 +45,10 @@ Wide refactors are the exception. If one mechanical change fans across the whole
 5. Identify the thinnest path through UI, API, service workflow, storage, async boundary, and tests.
 6. Identify seams for TDD and whether each seam is already documented or new.
 7. Mark dependencies and blockers.
-8. Write the slice artifact.
-9. Park important deferred work with a revisit trigger instead of leaving it only in Out Of Scope.
-10. Ask for approval before implementation if the slice changes scope, policy, or architecture.
+8. Draft the acceptance scenario(s) and get the user's explicit sign-off on the scenario text itself, as its own checkpoint distinct from design-question grilling — see `sdlc-delivery-acceptance-scenario-signoff`. Skip only when the slice has no new user-facing behaviour to verify.
+9. Write the slice artifact, embedding the approved scenarios (Test Seams / Acceptance Criteria).
+10. Park important deferred work with a revisit trigger instead of leaving it only in Out Of Scope.
+11. Ask for approval before implementation if the slice changes scope, policy, or architecture.
 
 ## Artifact
 
@@ -132,6 +133,8 @@ List only the minimum entities, fields, or contract messages needed for the slic
 At slice or remediation closeout, check whether the work changes the project's traceability chain or AI-SDLC learning record. If it does, update or recommend updating the relevant requirements, product spec, domain model, ADRs, slice docs, acceptance tests, verification report, parking-lot items, or AI-SDLC observations.
 
 ## Handoff To Delivery
+
+Before implementation begins, use `sdlc-delivery-acceptance-scenario-signoff` to get the acceptance scenarios themselves reviewed and approved — not just the slice doc's prose summary of them.
 
 When the slice is approved and implementation begins:
 

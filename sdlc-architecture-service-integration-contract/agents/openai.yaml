@@ -1,0 +1,7 @@
+interface:
+  display_name: "Service Integration Contract"
+  short_description: "Design a machine-to-machine integration contract between two systems you own independently"
+  default_prompt: "Use $sdlc-architecture-service-integration-contract to scope the auth, adapter, and durability shape of this cross-system integration."
+
+policy:
+  allow_implicit_invocation: true

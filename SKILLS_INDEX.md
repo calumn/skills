@@ -34,6 +34,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-architecture-system-context`: create high-level system context documents and diagrams.
 - `sdlc-architecture-codebase-design`: design deep modules, clean interfaces, seams, adapters, and testable codebase structure.
 - `sdlc-architecture-persistence-design`: design persistence boundaries, schemas, repositories, migrations, audit/history, and retention.
+- `sdlc-architecture-service-integration-contract`: design an integration contract between two systems you own but build independently — scoped machine-to-machine auth, stub-then-real adapters for a dependency the other side hasn't built yet, and durable suspend/resume across an external human action.
 
 ### SDLC Delivery
 
@@ -56,6 +57,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 ### HiveSight
 
 - `hivesight-project-delivery-context`: HiveSight-specific delivery defaults, service boundaries, seams, verification commands, dev auth, and closeout reminders.
+- `hivesight-advisor-integration-contract`: the concrete, living cross-app contract between HiveSight and HiveSight Advisor (endpoint status, service-auth header, hive-ID handling) — spans both repos, kept as one shared reference rather than duplicated in each project's own docs.
 
 ## Suggested Future Skills
 

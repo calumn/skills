@@ -1,0 +1,7 @@
+interface:
+  display_name: "HiveSight / Advisor Integration Contract"
+  short_description: "The current, concrete cross-app contract between HiveSight and HiveSight Advisor"
+  default_prompt: "Use $hivesight-advisor-integration-contract to check the current state of the HiveSight/Advisor integration before reasoning about it."
+
+policy:
+  allow_implicit_invocation: true

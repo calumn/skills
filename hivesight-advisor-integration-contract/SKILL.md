@@ -14,13 +14,13 @@ For the general reasoning behind the pattern used here (scoped service auth, stu
 - **HiveSight** owns hive identity, inspection history (photo-based mite counts over time), and treatment history (what was actually applied, when). It is the UI entry point for the integration — a button in HiveSight's own hive-management flow triggers a request into the Advisor.
 - **HiveSight Advisor** owns the grounded knowledge/recommendation logic. It is a **read**-dependent consumer of HiveSight's inspection/treatment history, and keeps its own separate record of what it recommended and when — it is never the system of record for what was actually applied to a hive.
 
-## The Contract (current state: 2026-08-05)
+## The Contract (current state: 2026-08-05, Slice 0008 implemented and merged)
 
 | Integration point | Direction | Status |
 |---|---|---|
-| Request a treatment plan for a hive | HiveSight → Advisor | **Built on the Advisor side** (Slice 0008), against a real inbound endpoint. Not yet called by a real HiveSight caller. |
-| Accept a suggested treatment | Advisor → HiveSight | **Not built on either side yet.** Advisor Slice 0008 stubs this with a `TreatmentSuggestionProvider` adapter that does not call a real HiveSight endpoint. |
-| Confirm a treatment was completed | HiveSight → Advisor | **Stood in for, on the Advisor side, by a test-only endpoint** (Slice 0008) — simulates the eventual real webhook. HiveSight has not built the real call yet. |
+| Request a treatment plan for a hive | HiveSight → Advisor | **Built and tested on the Advisor side.** `POST /integrations/hivesight/treatment-plans` — body `{hive_id, jurisdiction_id, situational_context}`, returns `{text, grounding_status, citations}`. Not yet called by a real HiveSight caller. |
+| Accept a suggested treatment | Advisor → HiveSight | **Not built on either side yet.** The Advisor calls `TreatmentSuggestionProvider.suggest_treatment(hive_id, answer_text)` — a stub (`StubTreatmentSuggestionProvider`) that records the call but makes no real network request, since HiveSight has no endpoint to receive it yet. |
+| Confirm a treatment was completed | HiveSight → Advisor | **Stood in for, on the Advisor side, by a test-only endpoint.** `POST /integrations/hivesight/treatment-plans/completions` — body `{hive_id}`, returns `{id, status}` or 404 if nothing is awaiting completion. Simulates the eventual real HiveSight webhook; HiveSight has not built the real call yet. |
 
 HiveSight's own roadmap (tracked in the `hive-sight` repo, not here) is expected to add: the ability to record treatments against hives, and an endpoint to accept a suggested treatment for a hive. Check there for current status rather than assuming this table is up to date without verifying — this file records what was true as of the date above, not a live feed.
 

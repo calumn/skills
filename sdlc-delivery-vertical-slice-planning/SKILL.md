@@ -25,6 +25,7 @@ Use project vocabulary exactly. If the language conflicts with `CONTEXT.md`, pau
 
 A vertical slice is a narrow but complete path through the product.
 
+- Do not assign slice numbers to future candidate work. Keep roadmap candidates named descriptively until the work is promoted into an actual slice artifact or explicitly scheduled into the delivery order.
 - It must be demoable or verifiable on its own.
 - It should cut through the relevant layers: data shape, API, service workflow, UI, tests, and operational evidence where applicable.
 - It should not be a horizontal slice such as "build all database tables" or "create all API routes".

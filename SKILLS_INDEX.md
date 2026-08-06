@@ -35,6 +35,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-architecture-codebase-design`: design deep modules, clean interfaces, seams, adapters, and testable codebase structure.
 - `sdlc-architecture-persistence-design`: design persistence boundaries, schemas, repositories, migrations, audit/history, and retention.
 - `sdlc-architecture-service-integration-contract`: design an integration contract between two systems you own but build independently — scoped machine-to-machine auth, stub-then-real adapters for a dependency the other side hasn't built yet, and durable suspend/resume across an external human action.
+- `sdlc-architecture-cross-project-contract-review`: review a design/API proposal arriving from another project touching a shared integration boundary — verify its claims against real code (including empirically, where reading code isn't enough), record the result as a durable response doc, and update the living contract artifact only once implemented. Process companion to `sdlc-architecture-service-integration-contract`.
 
 ### SDLC Delivery
 

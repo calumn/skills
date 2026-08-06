@@ -1,0 +1,7 @@
+interface:
+  display_name: "Cross-Project Contract Review"
+  short_description: "Review and verify a design proposal from another project touching a shared integration boundary"
+  default_prompt: "Use $sdlc-architecture-cross-project-contract-review to review this incoming design against our real code and produce a durable response."
+
+policy:
+  allow_implicit_invocation: true

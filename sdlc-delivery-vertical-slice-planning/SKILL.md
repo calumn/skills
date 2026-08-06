@@ -34,6 +34,7 @@ A vertical slice is a narrow but complete path through the product.
 - It should use stubs only where the stub is explicit, isolated, and replaceable.
 - It should identify the public seams where TDD will happen.
 - It should state what is deliberately out of scope.
+- If the slice touches a previously-declared external API surface (an endpoint another project, team, or client is meant to call — see `sdlc-architecture-service-integration-contract`) and would be a breaking change to it, that must be raised and explicitly agreed as its own grilled decision during design — never discovered only after implementation, e.g. by a schema diff in CI. A breaking change to declared external surface is a design decision, not an implementation detail; treat "should this be breaking, and are we bumping the contract version" the same way any other genuine design fork gets grilled, with a stated recommendation and explicit sign-off.
 
 Wide refactors are the exception. If one mechanical change fans across the whole codebase, plan it as expand, migrate, contract instead of pretending it is a vertical slice.
 
@@ -42,7 +43,7 @@ Wide refactors are the exception. If one mechanical change fans across the whole
 1. Gather context from docs and the current codebase.
 2. Name the user-visible behaviour the slice proves.
 3. Identify the entry point and end state.
-4. Check preconditions and policy gates.
+4. Check preconditions and policy gates — including whether the slice touches previously-declared external API surface, and if so, whether it's a breaking change that needs its own grilled decision (see Vertical Slice Rules).
 5. Identify the thinnest path through UI, API, service workflow, storage, async boundary, and tests.
 6. Identify seams for TDD and whether each seam is already documented or new.
 7. Mark dependencies and blockers.

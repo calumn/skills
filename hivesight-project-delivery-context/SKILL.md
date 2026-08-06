@@ -32,7 +32,9 @@ Use this skill only for HiveSight-specific delivery context. Pair it with generi
 - Keep product slices thin, demoable, and testable.
 - Preserve stable domain language from `CONTEXT.md`.
 - Prefer API-level BDD for service acceptance.
-- Prefer Playwright specs for current UI/browser acceptance until a UI-level Gherkin harness is deliberately introduced.
+- Slice 0030 introduced the shared acceptance-catalogue pilot: client-neutral Gherkin lives under `acceptance/features/<capability>/...` and can be bound separately through Core API `pytest-bdd` and Web `playwright-bdd` when both seams add confidence.
+- Keep plain Playwright specs for browser-only visual, geometry, interaction, and accessibility behaviour. Do not force those details into shared Gherkin.
+- For new cross-client behaviours, prefer the shared acceptance-catalogue pattern. For existing slice-history tests, migrate capability-by-capability only when the behaviour is touched or drift risk is high.
 - Use `pnpm verify:slice` before closing slices or remediation work.
 - When fixing defects in HiveSight, apply `sdlc-delivery-defect-regression-guard`: add the cheapest useful regression guard unless explicitly deciding and reporting why no test was added.
 - Treat `pnpm verify:slice` as necessary but not always sufficient. If a slice changes durable persistence, migrations, database constraints, seed/reset behaviour, or restart-survival claims, also verify the live Postgres path or explicitly record why it could not be run.

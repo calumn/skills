@@ -69,7 +69,11 @@ Pick the highest reliable seam that proves the behaviour:
 - **Browser-level BDD**: use when the visual/user workflow itself is the behaviour, or when UI state/copy/accessibility is the acceptance target.
 - **Service-level BDD**: use when the actor is an internal service or async worker and HTTP/UI would add noise.
 
-When plain browser tests are used instead of UI-level Gherkin, record whether UI Gherkin is deliberately deferred, unnecessary, or parked for a future harness decision.
+For behaviours that matter through more than one client, prefer a single client-neutral feature file with separate binding modules for each seam. The Gherkin should describe domain behaviour only; API steps can perform HTTP calls, browser steps can click controls, and service steps can call workflow objects, but the feature text should not mention routes, buttons, selectors, database tables, or transport details.
+
+Not every scenario needs to run through every seam. Label and document scenarios or feature groups as API-only, browser-only, service-only, or shared when the distinction matters. Keep API contract tests, component tests, visual regression tests, and low-level workflow tests separate from acceptance Gherkin.
+
+When plain browser tests are used instead of browser-level Gherkin, record whether browser Gherkin is deliberately deferred, unnecessary, or parked for a future harness decision.
 
 ## Naming And Placement
 
@@ -84,6 +88,22 @@ tests/
 
 Use feature filenames that identify the behaviour or slice. Use test filenames that identify the binding layer.
 
+For mature product capabilities, prefer a living capability catalogue over slice-history filenames, for example:
+
+```text
+acceptance/
+  features/
+    payments/
+      refund-request.feature
+services/api/tests/
+  test_refund_request_api_bdd.py
+apps/web/tests/bdd/
+  steps/
+    refund-request.steps.ts
+```
+
+Historical vertical-slice documents may keep their signed-off Gherkin as delivery evidence, but the living executable specification should have one canonical home. If a later slice supersedes behaviour, update the canonical feature and binding tests; do not rely on stale slice documents as the current catalogue.
+
 ## Review Checklist
 
 - Does the scenario read like product behaviour, not code structure?
@@ -94,6 +114,8 @@ Use feature filenames that identify the behaviour or slice. Use test filenames t
 - Can a failing step point to a useful product regression?
 - Are lower-level details covered by faster seam tests instead of bloating the feature?
 - Are Gherkin files and step definitions both included in the normal test command?
+- If the feature is shared across clients, do all intended bindings execute the same canonical `.feature` file?
+- Are API-only, browser-only, service-only, and shared scenarios clearly separated when not every seam should run them?
 - Are deferred acceptance-test concerns parked or explicitly closed instead of repeated as vague future work?
 
 ## Useful Sources

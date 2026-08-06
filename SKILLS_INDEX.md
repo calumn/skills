@@ -47,7 +47,7 @@ Use prefixes to keep the collection organised without nesting skill folders.
 - `sdlc-delivery-defect-regression-guard`: guide defect fixes with an explicit regression-test decision at the cheapest useful level.
 - `sdlc-delivery-vertical-slice-planning`: define implementation-ready tracer-bullet slices that cut through UI, API, service workflow, storage, tests, and operational evidence where relevant.
 - `sdlc-delivery-acceptance-scenario-signoff`: after a slice's design questions are settled but before the slice doc is finalized or implementation begins, draft the actual Gherkin scenario text and get the user's explicit sign-off on it as its own checkpoint — for users who rely on acceptance scenarios, not code, to trust the system.
-- `sdlc-delivery-acceptance-bdd`: guide Gherkin, Cucumber-style feature files, pytest-bdd step definitions, and executable acceptance specifications.
+- `sdlc-delivery-acceptance-bdd`: guide Gherkin, Cucumber-style feature files, pytest-bdd step definitions, client-neutral shared features, seam-specific bindings, and executable acceptance specifications.
 - `sdlc-delivery-test-automation-reporting`: guide browser acceptance harnesses, local test orchestration, and slice verification reports.
 
 ### SDLC Governance
